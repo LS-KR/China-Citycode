@@ -145,3 +145,210 @@ var hour3data={"1d":["19日08时,d00,晴,-6℃,西北风,<3级,1","19日11时,d0
 > 维多利亚 502330100  
 > 拉巴特 321030100  
 
+## 详细抓取方法
+### 7日预报
+以河北沧州为例,抓取[http://www.weather.com.cn/weather/101090701.shtml](http://www.weather.com.cn/weather/101090701.shtml)中的第548~667行即可获得.以下是于2022年3月1日抓取的结果.
+``` HTML
+<ul class="t clearfix">
+<li class="sky skyid lv1 on">
+<h1>1日（今天）</h1>
+<big class="png40"></big>
+<big class="png40 n00"></big>
+<p title="晴" class="wea">晴</p>
+<p class="tem">
+<i>0℃</i>
+</p>
+<p class="win">
+<em>
+<span title="西南风" class="SW"></span>
+</em>
+<i>3-4级</i>
+</p>
+<div class="slid"></div>
+</li>
+<li class="sky skyid lv1">
+<h1>2日（明天）</h1>
+<big class="png40 d00"></big>
+<big class="png40 n00"></big>
+<p title="晴" class="wea">晴</p>
+<p class="tem">
+<span>16℃</span>/<i>0℃</i>
+</p>
+<p class="win">
+<em>
+<span title="西风" class="W"></span>
+<span title="北风" class="N"></span>
+</em>
+<i><3级</i>
+</p>
+<div class="slid"></div>
+</li>
+<li class="sky skyid lv1">
+<h1>3日（后天）</h1>
+<big class="png40 d00"></big>
+<big class="png40 n01"></big>
+<p title="晴转多云" class="wea">晴转多云</p>
+<p class="tem">
+<span>16℃</span>/<i>2℃</i>
+</p>
+<p class="win">
+<em>
+<span title="西风" class="W"></span>
+<span title="西南风" class="SW"></span>
+</em>
+<i><3级转3-4级</i>
+</p>
+<div class="slid"></div>
+</li>
+<li class="sky skyid lv1">
+<h1>4日（周五）</h1>
+<big class="png40 d01"></big>
+<big class="png40 n00"></big>
+<p title="多云转晴" class="wea">多云转晴</p>
+<p class="tem">
+<span>15℃</span>/<i>-2℃</i>
+</p>
+<p class="win">
+<em>
+<span title="西北风" class="NW"></span>
+<span title="东北风" class="NE"></span>
+</em>
+<i>4-5级转3-4级</i>
+</p>
+<div class="slid"></div>
+</li>
+<li class="sky skyid lv1">
+<h1>5日（周六）</h1>
+<big class="png40 d00"></big>
+<big class="png40 n01"></big>
+<p title="晴转多云" class="wea">晴转多云</p>
+<p class="tem">
+<span>11℃</span>/<i>0℃</i>
+</p>
+<p class="win">
+<em>
+<span title="东南风" class="SE"></span>
+<span title="东南风" class="SE"></span>
+</em>
+<i><3级转3-4级</i>
+</p>
+<div class="slid"></div>
+</li>
+<li class="sky skyid lv1">
+<h1>6日（周日）</h1>
+<big class="png40 d01"></big>
+<big class="png40 n01"></big>
+<p title="多云" class="wea">多云</p>
+<p class="tem">
+<span>17℃</span>/<i>1℃</i>
+</p>
+<p class="win">
+<em>
+<span title="西南风" class="SW"></span>
+<span title="北风" class="N"></span>
+</em>
+<i>4-5级转3-4级</i>
+</p>
+<div class="slid"></div>
+</li>
+<li class="sky skyid lv1">
+<h1>7日（周一）</h1>
+<big class="png40 d00"></big>
+<big class="png40 n00"></big>
+<p title="晴" class="wea">晴</p>
+<p class="tem">
+<span>18℃</span>/<i>2℃</i>
+</p>
+<p class="win">
+<em>
+<span title="东南风" class="SE"></span>
+<span title="东南风" class="SE"></span>
+</em>
+<i>3-4级</i>
+</p>
+<div class="slid"></div>
+</li>
+</ul>
+```
+
+### 8~15日预报
+以山东烟台为例,抓取[http://www.weather.com.cn/weather15d/101120501.shtml](http://www.weather.com.cn/weather15d/101120501.shtml)中的第543~616行即可获得.以下是于2022年3月1日抓取的结果.
+``` HTML
+<ul class="t clearfix">
+<li class="t">
+<span class="time">周二（8日）</span>
+<big class="png30 d01"></big>
+<big class="png30 n00"></big>
+<span class="wea">多云转晴</span>
+<span class="tem"><em>14℃</em>/1℃</span>
+<span class="wind">南风转北风</span>
+<span class="wind1">3-4级转<3级</span>
+</li>
+<li>
+<span class="time">周三（9日）</span>
+<big class="png30 d00"></big>
+<big class="png30 n00"></big>
+<span class="wea">晴</span>
+<span class="tem"><em>12℃</em>/2℃</span>
+<span class="wind">西风转南风</span>
+<span class="wind1"><3级</span>
+</li>
+<li class="t">
+<span class="time">周四（10日）</span>
+<big class="png30 d02"></big>
+<big class="png30 n02"></big>
+<span class="wea">阴</span>
+<span class="tem"><em>10℃</em>/3℃</span>
+<span class="wind">南风</span>
+<span class="wind1">3-4级转<3级</span>
+</li>
+<li>
+<span class="time">周五（11日）</span>
+<big class="png30 d02"></big>
+<big class="png30 n02"></big>
+<span class="wea">阴</span>
+<span class="tem"><em>9℃</em>/4℃</span>
+<span class="wind">东风转南风</span>
+<span class="wind1"><3级</span>
+</li>
+<li class="t">
+<span class="time">周六（12日）</span>
+<big class="png30 d301"></big>
+<big class="png30 n02"></big>
+<span class="wea">雨转阴</span>
+<span class="tem"><em>7℃</em>/2℃</span>
+<span class="wind">东北风转北风</span>
+<span class="wind1"><3级</span>
+</li>
+<li>
+<span class="time">周日（13日）</span>
+<big class="png30 d02"></big>
+<big class="png30 n02"></big>
+<span class="wea">阴</span>
+<span class="tem"><em>7℃</em>/2℃</span>
+<span class="wind">东北风</span>
+<span class="wind1"><3级</span>
+</li>
+<li class="t">
+<span class="time">周一（14日）</span>
+<big class="png30 d02"></big>
+<big class="png30 n02"></big>
+<span class="wea">阴</span>
+<span class="tem"><em>6℃</em>/4℃</span>
+<span class="wind">东北风转西北风</span>
+<span class="wind1"><3级</span>
+</li>
+<li>
+<span class="time">周二（15日）</span>
+<big class="png30 d02"></big>
+<big class="png30 n06"></big>
+<span class="wea">阴转雨夹雪</span>
+<span class="tem"><em>7℃</em>/0℃</span>
+<span class="wind">西北风转北风</span>
+<span class="wind1"><3级转4-5级</span>
+</li>
+</ul>
+```
+
+### 40日预报
+未遂
